@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b98019bedbaed12cf79b520c2e295d37 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b98019bedbaed12cf79b520c2e295d37" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b98019bedbaed12cf79b520c2e295d37 = L.map(
+                "map_b98019bedbaed12cf79b520c2e295d37",
+                {
+                    center: [55.951098, 38.126304],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d245a3f412ee12c61e5c52303c1ebfb6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d245a3f412ee12c61e5c52303c1ebfb6.addTo(map_b98019bedbaed12cf79b520c2e295d37);
+        
+    
+            var marker_cluster_72c45116ece93415b15a2f7bb9840cab = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_047310733779569be962d4f4a8b619d7 = L.marker(
+                [55.950951, 38.127908],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_667709a9a172c195f6d2131be5bfd516 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d5687a3541366bce57e1dcda1919aa9 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_a3ffc828392d9ce34fd0a37851e225c7 = $(`<div id="html_a3ffc828392d9ce34fd0a37851e225c7" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: lightblue;'>             <i class='fa cloud'></i>             "СОКОЛ-ДВП"         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>влажность воздуха</td>                 <td style='padding: 5px;'>67.44</td>                 <td style='padding: 5px;'>%</td>                 <td style='padding: 5px;'>0.0-80.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>температура</td>                 <td style='padding: 5px;'>-0.66</td>                 <td style='padding: 5px;'>град. С</td>                 <td style='padding: 5px;'>-40.0-55.0</td>             </tr>         </table></div></div>`)[0];
+                popup_5d5687a3541366bce57e1dcda1919aa9.setContent(html_a3ffc828392d9ce34fd0a37851e225c7);
+            
+        
+
+        marker_047310733779569be962d4f4a8b619d7.bindPopup(popup_5d5687a3541366bce57e1dcda1919aa9)
+        ;
+
+        
+    
+    
+            marker_047310733779569be962d4f4a8b619d7.bindTooltip(
+                `<div>
+                     "СОКОЛ-ДВП"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_047310733779569be962d4f4a8b619d7.setIcon(icon_667709a9a172c195f6d2131be5bfd516);
+            
+    
+            var marker_41723dbd467abd30cf3dc7bafca28e45 = L.marker(
+                [55.951098, 38.126304],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_d1f6eb2ec6338988ba84e161b652675b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a7903da86b9e4070588112f2bc64440 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_5bb43c28cba55984b29ba977cdb07c8b = $(`<div id="html_5bb43c28cba55984b29ba977cdb07c8b" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: blue;'>             <i class='fa cloud'></i>             "СОКОЛ-М1"         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>температура воздуха</td>                 <td style='padding: 5px;'>-9.46</td>                 <td style='padding: 5px;'>град. С</td>                 <td style='padding: 5px;'>-50.0-55.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>влажность</td>                 <td style='padding: 5px;'>13.28</td>                 <td style='padding: 5px;'>%</td>                 <td style='padding: 5px;'>0.0-100.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>количество осадков</td>                 <td style='padding: 5px;'>N/A</td>                 <td style='padding: 5px;'>мм</td>                 <td style='padding: 5px;'>N/A</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>интенсивность осадков</td>                 <td style='padding: 5px;'>61.02</td>                 <td style='padding: 5px;'>мм/ч</td>                 <td style='padding: 5px;'>0.0-120.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>фотосинтетически активная солнечная радиация (мощность)</td>                 <td style='padding: 5px;'>18.49</td>                 <td style='padding: 5px;'>Вт/м2</td>                 <td style='padding: 5px;'>0.0-32.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>атмосферное давление</td>                 <td style='padding: 5px;'>568.21</td>                 <td style='padding: 5px;'>гПа</td>                 <td style='padding: 5px;'>540.0-1100.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>скорость воздушного потока</td>                 <td style='padding: 5px;'>18.55</td>                 <td style='padding: 5px;'>м/с</td>                 <td style='padding: 5px;'>1.0-60.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>направление воздушного потока</td>                 <td style='padding: 5px;'>202.2</td>                 <td style='padding: 5px;'>град</td>                 <td style='padding: 5px;'>0.0-359.0</td>             </tr>         </table></div></div>`)[0];
+                popup_6a7903da86b9e4070588112f2bc64440.setContent(html_5bb43c28cba55984b29ba977cdb07c8b);
+            
+        
+
+        marker_41723dbd467abd30cf3dc7bafca28e45.bindPopup(popup_6a7903da86b9e4070588112f2bc64440)
+        ;
+
+        
+    
+    
+            marker_41723dbd467abd30cf3dc7bafca28e45.bindTooltip(
+                `<div>
+                     "СОКОЛ-М1"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_41723dbd467abd30cf3dc7bafca28e45.setIcon(icon_d1f6eb2ec6338988ba84e161b652675b);
+            
+    
+            var marker_a634c21c6dccea87bbd6fba3e93312dd = L.marker(
+                [55.950698, 38.128997],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_c455a0d4a27c338ce589c7fa209430dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42895431ca089ca184d6a1407cca9109 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_40ba1134ddba32847e34dad72e8f4657 = $(`<div id="html_40ba1134ddba32847e34dad72e8f4657" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: beige;'>             <i class='fa info-sign'></i>             4000 TOC         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>ХПК</td>                 <td style='padding: 5px;'>93.67</td>                 <td style='padding: 5px;'>ppb</td>                 <td style='padding: 5px;'>0.5-1000.0</td>             </tr>         </table></div></div>`)[0];
+                popup_42895431ca089ca184d6a1407cca9109.setContent(html_40ba1134ddba32847e34dad72e8f4657);
+            
+        
+
+        marker_a634c21c6dccea87bbd6fba3e93312dd.bindPopup(popup_42895431ca089ca184d6a1407cca9109)
+        ;
+
+        
+    
+    
+            marker_a634c21c6dccea87bbd6fba3e93312dd.bindTooltip(
+                `<div>
+                     4000 TOC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a634c21c6dccea87bbd6fba3e93312dd.setIcon(icon_c455a0d4a27c338ce589c7fa209430dd);
+            
+    
+            var marker_26bcb999d0efde124c42dd2a166e99bd = L.marker(
+                [55.950659, 38.129019],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_a1ea500f7a6f3d30c1ea3ba8c738f275 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ca145603928c40e06f391fcb3c2e390 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_60d182b27679eb5eaeefa26cc03e37e7 = $(`<div id="html_60d182b27679eb5eaeefa26cc03e37e7" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: darkred;'>             <i class='fa exclamation-sign'></i>             AS-C5         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>хром</td>                 <td style='padding: 5px;'>8.77</td>                 <td style='padding: 5px;'>ммоль/л</td>                 <td style='padding: 5px;'>0.2-20.0</td>             </tr>         </table></div></div>`)[0];
+                popup_2ca145603928c40e06f391fcb3c2e390.setContent(html_60d182b27679eb5eaeefa26cc03e37e7);
+            
+        
+
+        marker_26bcb999d0efde124c42dd2a166e99bd.bindPopup(popup_2ca145603928c40e06f391fcb3c2e390)
+        ;
+
+        
+    
+    
+            marker_26bcb999d0efde124c42dd2a166e99bd.bindTooltip(
+                `<div>
+                     AS-C5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_26bcb999d0efde124c42dd2a166e99bd.setIcon(icon_a1ea500f7a6f3d30c1ea3ba8c738f275);
+            
+    
+            var marker_8248ac746565e83cc444a68dd872e51d = L.marker(
+                [55.951156, 38.12779],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_28e4ecddcf464d1c5a86c21f829e3ab0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "fire-extinguisher",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d1867dba0202a2fd777f18093a63bd7 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_ecca72710d3cf9274cbeb691802b5195 = $(`<div id="html_ecca72710d3cf9274cbeb691802b5195" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: orange;'>             <i class='fa fire-extinguisher'></i>             ECOPROBE-5         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CO2</td>                 <td style='padding: 5px;'>23168.63</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-500000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CH4</td>                 <td style='padding: 5px;'>242915.53</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-500000.0</td>             </tr>         </table></div></div>`)[0];
+                popup_1d1867dba0202a2fd777f18093a63bd7.setContent(html_ecca72710d3cf9274cbeb691802b5195);
+            
+        
+
+        marker_8248ac746565e83cc444a68dd872e51d.bindPopup(popup_1d1867dba0202a2fd777f18093a63bd7)
+        ;
+
+        
+    
+    
+            marker_8248ac746565e83cc444a68dd872e51d.bindTooltip(
+                `<div>
+                     ECOPROBE-5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8248ac746565e83cc444a68dd872e51d.setIcon(icon_28e4ecddcf464d1c5a86c21f829e3ab0);
+            
+    
+            var marker_749348c8358381d0510218a7223f4c10 = L.marker(
+                [55.950992, 38.126484],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_ba7d4f401ce34daa5bac508ee69585db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "sun-o",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74627d3a9c023dbb60821efea7681b8c = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_09e81871d326d5036d1f9660fa255802 = $(`<div id="html_09e81871d326d5036d1f9660fa255802" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: cadetblue;'>             <i class='fa sun-o'></i>             FSR – 406.2         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>фотосинтетически активная солнечная радиация (мощность)</td>                 <td style='padding: 5px;'>503.49</td>                 <td style='padding: 5px;'>Вт/м2</td>                 <td style='padding: 5px;'>0.0-1200.0</td>             </tr>         </table></div></div>`)[0];
+                popup_74627d3a9c023dbb60821efea7681b8c.setContent(html_09e81871d326d5036d1f9660fa255802);
+            
+        
+
+        marker_749348c8358381d0510218a7223f4c10.bindPopup(popup_74627d3a9c023dbb60821efea7681b8c)
+        ;
+
+        
+    
+    
+            marker_749348c8358381d0510218a7223f4c10.bindTooltip(
+                `<div>
+                     FSR – 406.2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_749348c8358381d0510218a7223f4c10.setIcon(icon_ba7d4f401ce34daa5bac508ee69585db);
+            
+    
+            var marker_2e29b44e0e1fb7ed3c21ff6308ac7ef5 = L.marker(
+                [55.950878, 38.126417],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_4683cd7bca05b6ea32dd9ae34d00d7f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "fire",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a2cb027c40b15d58cc74feebdf13726 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_8e1a47d2ca010cfe7962e83600aea200 = $(`<div id="html_8e1a47d2ca010cfe7962e83600aea200" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: red;'>             <i class='fa fire'></i>             GAZERA ONE         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CO2</td>                 <td style='padding: 5px;'>56081.95</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>5.0-500000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CH4</td>                 <td style='padding: 5px;'>9763.87</td>                 <td style='padding: 5px;'>ppb</td>                 <td style='padding: 5px;'>0.4-40000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>Н20</td>                 <td style='padding: 5px;'>2903161.47</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>100.0-10000000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CH4</td>                 <td style='padding: 5px;'>10944.05</td>                 <td style='padding: 5px;'>ppb</td>                 <td style='padding: 5px;'>10.0-1000000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>NO2</td>                 <td style='padding: 5px;'>130324.94</td>                 <td style='padding: 5px;'>ppb</td>                 <td style='padding: 5px;'>2.0-200000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>влажность</td>                 <td style='padding: 5px;'>23.77</td>                 <td style='padding: 5px;'>%</td>                 <td style='padding: 5px;'>0.0-90.0</td>             </tr>         </table></div></div>`)[0];
+                popup_0a2cb027c40b15d58cc74feebdf13726.setContent(html_8e1a47d2ca010cfe7962e83600aea200);
+            
+        
+
+        marker_2e29b44e0e1fb7ed3c21ff6308ac7ef5.bindPopup(popup_0a2cb027c40b15d58cc74feebdf13726)
+        ;
+
+        
+    
+    
+            marker_2e29b44e0e1fb7ed3c21ff6308ac7ef5.bindTooltip(
+                `<div>
+                     GAZERA ONE
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e29b44e0e1fb7ed3c21ff6308ac7ef5.setIcon(icon_4683cd7bca05b6ea32dd9ae34d00d7f9);
+            
+    
+            var marker_313533f3b34c5a0cbf2ef14696d47b38 = L.marker(
+                [55.950728, 38.128976],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_f9c9b54b2769b90b60559f180da84b6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c5f4aece285078d350ffcc0ce4f2bac = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_4eacea196a7f29f2c79fd932524b1916 = $(`<div id="html_4eacea196a7f29f2c79fd932524b1916" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: pink;'>             <i class='fa tint'></i>             HACH BODTrak II         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>хлорамин</td>                 <td style='padding: 5px;'>3.74</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>3.0-10.0</td>             </tr>         </table></div></div>`)[0];
+                popup_8c5f4aece285078d350ffcc0ce4f2bac.setContent(html_4eacea196a7f29f2c79fd932524b1916);
+            
+        
+
+        marker_313533f3b34c5a0cbf2ef14696d47b38.bindPopup(popup_8c5f4aece285078d350ffcc0ce4f2bac)
+        ;
+
+        
+    
+    
+            marker_313533f3b34c5a0cbf2ef14696d47b38.bindTooltip(
+                `<div>
+                     HACH BODTrak II
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_313533f3b34c5a0cbf2ef14696d47b38.setIcon(icon_f9c9b54b2769b90b60559f180da84b6e);
+            
+    
+            var marker_5b97c53e2d4074ac5a7403da0a083df6 = L.marker(
+                [55.950788, 38.12896],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_7ab80668902993103964d3e699b1afd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68a5acba21d29509a6a24d4d28be8197 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_d2b939d07a4e753f2548098a88ba56d1 = $(`<div id="html_d2b939d07a4e753f2548098a88ba56d1" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: lightred;'>             <i class='fa tint'></i>             HANNA HI9147         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>цветность</td>                 <td style='padding: 5px;'>14.44</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.6-20.0</td>             </tr>         </table></div></div>`)[0];
+                popup_68a5acba21d29509a6a24d4d28be8197.setContent(html_d2b939d07a4e753f2548098a88ba56d1);
+            
+        
+
+        marker_5b97c53e2d4074ac5a7403da0a083df6.bindPopup(popup_68a5acba21d29509a6a24d4d28be8197)
+        ;
+
+        
+    
+    
+            marker_5b97c53e2d4074ac5a7403da0a083df6.bindTooltip(
+                `<div>
+                     HANNA HI9147
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b97c53e2d4074ac5a7403da0a083df6.setIcon(icon_7ab80668902993103964d3e699b1afd9);
+            
+    
+            var marker_7dc4a4e498ba278afe671a190c9ea2b7 = L.marker(
+                [55.951053, 38.126315],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_73caa31f60dcdef909c7e4f143534bc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a8e7c5ff3483ed3a2d558cdbd3c97ff3 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_5e699fa80c230ca6537e27230b98164a = $(`<div id="html_5e699fa80c230ca6537e27230b98164a" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: green;'>             <i class='fa leaf'></i>             LI-7200RSF         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CO2</td>                 <td style='padding: 5px;'>1404.22</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-2000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CH4</td>                 <td style='padding: 5px;'>1197.96</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-2000.0</td>             </tr>         </table></div></div>`)[0];
+                popup_a8e7c5ff3483ed3a2d558cdbd3c97ff3.setContent(html_5e699fa80c230ca6537e27230b98164a);
+            
+        
+
+        marker_7dc4a4e498ba278afe671a190c9ea2b7.bindPopup(popup_a8e7c5ff3483ed3a2d558cdbd3c97ff3)
+        ;
+
+        
+    
+    
+            marker_7dc4a4e498ba278afe671a190c9ea2b7.bindTooltip(
+                `<div>
+                     LI-7200RSF
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7dc4a4e498ba278afe671a190c9ea2b7.setIcon(icon_73caa31f60dcdef909c7e4f143534bc4);
+            
+    
+            var marker_db0b36c0298221c368fe0a803a6bd6a7 = L.marker(
+                [55.951628, 38.12521],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_daf43c47c7841d7dbb4997541703d51a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "leaf",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_260a4ad4789f78b79a1ad35f11f1a397 = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_e8bc085b60d95928018f040d25d4af6f = $(`<div id="html_e8bc085b60d95928018f040d25d4af6f" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: darkgreen;'>             <i class='fa leaf'></i>             LI-7810SC         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CO2</td>                 <td style='padding: 5px;'>9508.55</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-10000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>CH4</td>                 <td style='padding: 5px;'>49.03</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-100.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>H2O</td>                 <td style='padding: 5px;'>27942.33</td>                 <td style='padding: 5px;'>ppm</td>                 <td style='padding: 5px;'>0.0-60000.0</td>             </tr>         </table></div></div>`)[0];
+                popup_260a4ad4789f78b79a1ad35f11f1a397.setContent(html_e8bc085b60d95928018f040d25d4af6f);
+            
+        
+
+        marker_db0b36c0298221c368fe0a803a6bd6a7.bindPopup(popup_260a4ad4789f78b79a1ad35f11f1a397)
+        ;
+
+        
+    
+    
+            marker_db0b36c0298221c368fe0a803a6bd6a7.bindTooltip(
+                `<div>
+                     LI-7810SC
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_db0b36c0298221c368fe0a803a6bd6a7.setIcon(icon_daf43c47c7841d7dbb4997541703d51a);
+            
+    
+            var marker_9b129eb9794dc1a6a7e9cb564004a89a = L.marker(
+                [55.950891, 38.128627],
+                {
+}
+            ).addTo(marker_cluster_72c45116ece93415b15a2f7bb9840cab);
+        
+    
+            var icon_7555b74a1d1ccde1077e3e3b1aef7469 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "flask",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_667cb1dd7f35c79028f359817eb502ad = L.popup({
+  "maxWidth": 600,
+});
+
+        
+            
+                var html_450f357a34e29f310c589ed2b6355e6a = $(`<div id="html_450f357a34e29f310c589ed2b6355e6a" style="width: 100.0%; height: 100.0%;">     <div style='max-height: 400px; overflow-y: auto;'>         <h4 style='color: purple;'>             <i class='fa flask'></i>             Спектрофотометр DR 900         </h4>         <table style='width: 100%; border-collapse: collapse;'>             <tr style='background-color: #f9f9f9;'>                 <th style='padding: 5px; text-align: left;'>Показатель</th>                 <th style='padding: 5px; text-align: left;'>Значение</th>                 <th style='padding: 5px; text-align: left;'>Единица измерения</th>                 <th style='padding: 5px; text-align: left;'>Диапазон</th>             </tr>                  <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>азот общий</td>                 <td style='padding: 5px;'>1259.89</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>100.0-2000.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>алюминий</td>                 <td style='padding: 5px;'>26.44</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-50.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>аммоний</td>                 <td style='padding: 5px;'>4.26</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-5.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>БПК5</td>                 <td style='padding: 5px;'>0.42</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-5.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>гидразин</td>                 <td style='padding: 5px;'>0.0</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.0-0.01</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>железо</td>                 <td style='padding: 5px;'>2.44</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-5.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>жесткость</td>                 <td style='padding: 5px;'>0.87</td>                 <td style='padding: 5px;'>мг-экв/л</td>                 <td style='padding: 5px;'>0.0-10.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>марганец</td>                 <td style='padding: 5px;'>0.84</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-1.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>медь</td>                 <td style='padding: 5px;'>4.7</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.05-5.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>молибден</td>                 <td style='padding: 5px;'>0.08</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.0-0.25</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>никель</td>                 <td style='padding: 5px;'>0.19</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.006-1.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>нитраты</td>                 <td style='padding: 5px;'>1.31</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.0-3.3</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>нитратный азот</td>                 <td style='padding: 5px;'>6.42</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.0-45.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>озон</td>                 <td style='padding: 5px;'>0.27</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-1.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>растворенный кисород</td>                 <td style='padding: 5px;'>9.58</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-12.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>растворенный неорганический углерод</td>                 <td style='padding: 5px;'>0.51</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.0-1.5</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>содержание общего углерода в воде</td>                 <td style='padding: 5px;'>0.87</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-5.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>фосфор общий</td>                 <td style='padding: 5px;'>0.16</td>                 <td style='padding: 5px;'>мг/дм3</td>                 <td style='padding: 5px;'>0.0-5.0</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>фторид</td>                 <td style='padding: 5px;'>0.2</td>                 <td style='padding: 5px;'>мг/л</td>                 <td style='padding: 5px;'>0.01-0.7</td>             </tr>                      <tr style='border-bottom: 1px solid #eee;'>                 <td style='padding: 5px;'>хлор активный</td>                 <td style='padding: 5px;'>104.78</td>                 <td style='padding: 5px;'>град. цветности</td>                 <td style='padding: 5px;'>0.0-120.0</td>             </tr>         </table></div></div>`)[0];
+                popup_667cb1dd7f35c79028f359817eb502ad.setContent(html_450f357a34e29f310c589ed2b6355e6a);
+            
+        
+
+        marker_9b129eb9794dc1a6a7e9cb564004a89a.bindPopup(popup_667cb1dd7f35c79028f359817eb502ad)
+        ;
+
+        
+    
+    
+            marker_9b129eb9794dc1a6a7e9cb564004a89a.bindTooltip(
+                `<div>
+                     Спектрофотометр DR 900
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b129eb9794dc1a6a7e9cb564004a89a.setIcon(icon_7555b74a1d1ccde1077e3e3b1aef7469);
+            
+    
+            marker_cluster_72c45116ece93415b15a2f7bb9840cab.addTo(map_b98019bedbaed12cf79b520c2e295d37);
+        
+    
+            var layer_control_4b055072d7e7df1d6f33432633ffdc6d_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d245a3f412ee12c61e5c52303c1ebfb6,
+                },
+                overlays :  {
+                    "macro_element_72c45116ece93415b15a2f7bb9840cab" : marker_cluster_72c45116ece93415b15a2f7bb9840cab,
+                },
+            };
+            let layer_control_4b055072d7e7df1d6f33432633ffdc6d = L.control.layers(
+                layer_control_4b055072d7e7df1d6f33432633ffdc6d_layers.base_layers,
+                layer_control_4b055072d7e7df1d6f33432633ffdc6d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_b98019bedbaed12cf79b520c2e295d37);
+
+        
+</script>
+</html>
